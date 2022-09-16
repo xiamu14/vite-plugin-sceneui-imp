@@ -14,7 +14,6 @@
   },
   "scripts": {
     "dev": "tsc -w -p .",
-    "build": "rm -rf dist && tsc -p .",
     "prepublishOnly": "yarn unbuild",
     "patch-cjs": "ts-node scripts/patch_cjs.ts --module=CommonJS",
     "unbuild": "unbuild && yarn patch-cjs"
