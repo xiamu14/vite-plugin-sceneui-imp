@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@sceneui/button": "0.0.1-alpha.2",
+    "@sceneui/space": "0.0.1-alpha.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "vite-plugin-sceneui-imp": "workspace:*"

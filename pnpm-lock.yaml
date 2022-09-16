@@ -11,6 +11,7 @@ importers:
   demo/vite-button:
     specifiers:
       '@sceneui/button': 0.0.1-alpha.2
+      '@sceneui/space': 0.0.1-alpha.0
       '@types/react': ^18.0.17
       '@types/react-dom': ^18.0.6
       '@vitejs/plugin-react': ^2.0.1
@@ -22,6 +23,7 @@ importers:
       vite-plugin-sceneui-imp: workspace:*
     dependencies:
       '@sceneui/button': 0.0.1-alpha.2
+      '@sceneui/space': 0.0.1-alpha.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       vite-plugin-sceneui-imp: link:../../plugin
@@ -546,6 +548,13 @@ packages:
 
   /@sceneui/button/0.0.1-alpha.2:
     resolution: {integrity: sha512-f7mS+SqCynnolImLfUMe5GRup9KbEWvvmr0+P7UyvA0BhSLSNV+5z9mniMj6uAcs7mnolP8aT3XvKpjB0rU1Qw==}
+    dependencies:
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    dev: false
+
+  /@sceneui/space/0.0.1-alpha.0:
+    resolution: {integrity: sha512-pa9sS5oa8pA++nBFLzpsDdSXhfcfwsaG+ZvK6DUFQFwZnJGtmoiDn+N6Lrdda/Gyys3yWbm6iHgKHKSvbZeZfw==}
     dependencies:
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
@@ -1365,14 +1374,6 @@ packages:
     dev: false
     optional: true
 
-  /esbuild-linux-mips64le/0.14.54:
-    resolution: {integrity: sha512-qTHGQB8D1etd0u1+sB6p0ikLKRVuCWhYQhAHRPkO+OF3I/iSlTKNNS0Lh2Oc0g0UFGguaFZZiPJdJey3AGpAlw==}
-    engines: {node: '>=12'}
-    cpu: [mips64el]
-    os: [linux]
-    requiresBuild: true
-    optional: true
-
   /esbuild-linux-mips64le/0.15.6:
     resolution: {integrity: sha512-wVpW8wkWOGizsCqCwOR/G3SHwhaecpGy3fic9BF1r7vq4djLjUcA8KunDaBCjJ6TgLQFhJ98RjDuyEf8AGjAvw==}
     engines: {node: '>=12'}
@@ -1552,7 +1553,7 @@ packages:
       esbuild-linux-64: 0.14.54
       esbuild-linux-arm: 0.14.54
       esbuild-linux-arm64: 0.14.54
-      esbuild-linux-mips64le: 0.14.54
+      esbuild-linux-mips64le: mirrors.tencent.com/esbuild-linux-mips64le/0.14.54
       esbuild-linux-ppc64le: 0.14.54
       esbuild-linux-riscv64: 0.14.54
       esbuild-linux-s390x: 0.14.54
@@ -3294,3 +3295,13 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  mirrors.tencent.com/esbuild-linux-mips64le/0.14.54:
+    resolution: {integrity: sha512-qTHGQB8D1etd0u1+sB6p0ikLKRVuCWhYQhAHRPkO+OF3I/iSlTKNNS0Lh2Oc0g0UFGguaFZZiPJdJey3AGpAlw==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-linux-mips64le/-/esbuild-linux-mips64le-0.14.54.tgz}
+    name: esbuild-linux-mips64le
+    version: 0.14.54
+    engines: {node: '>=12'}
+    cpu: [mips64el]
+    os: [linux]
+    requiresBuild: true
+    optional: true
