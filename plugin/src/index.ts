@@ -14,9 +14,15 @@ export default function vitePluginSceneuiImp(): Plugin {
           "node_modules",
           stylePath
         );
-        const stat = fs.statSync(fullStylePath);
+        let isExist = false;
+        try {
+          const stat = fs.statSync(fullStylePath);
+          if (stat.isFile()) isExist = true;
+        } catch (error) {
+          void 0;
+        }
 
-        if (!stat.isFile) return { code, map: null };
+        if (!isExist) return { code, map: null };
         return {
           code: `import '${componentName}/dist/style.css';${code}`,
           map: null,
